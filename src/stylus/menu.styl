@@ -1,0 +1,50 @@
+.menu
+    border: 1px solid red
+    margin: 10px
+    display: none
+    position absolute
+    left 0
+    right 0
+    top: 100%
+    background rgba(47,53,79, .9)
+    ul 
+        padding 0
+        list-style: none
+    li 
+        border-top 1px solid var (--grayishBlue)
+        &:last-child
+            a
+                border: 2px solid white;
+                border-radius 5px
+                margin-top 1em
+                padding .7em
+    a
+        color white
+        text-decoration none
+        text-transform uppercase
+        display block
+        text-align center
+        padding 1em
+        letter-spacing: 2px
+    
+    &-checkbox
+        display none
+        &:checked
+            & ~ .header .menu-open
+                background-image url('../images/icon-close.svg')
+                border: 1px solid blue;
+            & ~ .header
+                background rgba(47,53,79, .9)
+                & .header-logo
+                background-image url('../images/logo-bookmark-white.svg') no-repeat center important
+                & .menu
+                    border: 1px solid red
+                    display block
+    &-open
+        border: 1px solid red
+        user-select: none
+        width 40px
+        height 40px
+        display inline-flex
+        cursor pointer
+        background url('../images/icon-hamburger.svg') no-repeat center
